@@ -3,9 +3,11 @@ using namespace std;
 
 
 void insertionSort(int arr[], int n) {
+
     for(int i=1; i<n; i++) {
         int current = arr[i];
         int j = i-1;
+        
         while(arr[j] > current && j >= 0) {
             arr[j+1] = arr[j];
             j--;
@@ -22,7 +24,8 @@ void print(int arr[], int n) {
 
 int main() {
     int n; 
-    cin >> n; 
+    cin >> n;
+
     int arr[n];
 
     for(int i=0; i<n; i++) { 
@@ -30,6 +33,7 @@ int main() {
     }
 
     insertionSort(arr, n);
+
     print(arr, n);
     
 }
