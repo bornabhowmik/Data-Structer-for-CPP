@@ -23,6 +23,28 @@ void lcs(char *s1, char *s2, int m, int n){
         cout<<endl;
     }
 }
+int index = LCS_table[m][n];
+    //cout << index << endl;
+    char lcsAlgo[index + 1];
+    
+    lcsAlgo[index] = '\0';
+
+    int i = m, j = n;
+    while (i > 0 && j > 0) {
+        if(S1[i-1] == S2[j-1]) {
+            lcsAlgo[index-1] = S1[i-1];
+            i--;
+            j--;
+            index--;
+        }
+        else if (LCS_table[i - 1][j] > LCS_table[i][j - 1])
+            i--;
+        else
+            j--;
+    }
+
+    // Printing the sub sequences
+    cout << "S1 : " << S1 << "\nS2 : " << S2 << "\nLCS: " << lcsAlgo << "\n";
 
 int main(){
 
