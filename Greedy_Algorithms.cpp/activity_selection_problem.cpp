@@ -36,12 +36,11 @@ void selectActivities(vector <Activity>& activities) {
 int main() {
     // vector <data-type> name(amra jekta dimu)
     vector <Activity> activity = {
-        {1,3}, 
-        {2,5},
-        {3,6},
-        {5,3},
-        {6,8},
-        {8,9},
+        {10,5}, 
+        {6,12},
+        {2,3},
+        {5,8},
+        {2,1},
     };
     selectActivities(activity);
 }
