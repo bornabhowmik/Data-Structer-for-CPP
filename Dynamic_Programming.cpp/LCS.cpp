@@ -14,7 +14,6 @@ void lcs(char *s1, char *s2, int m, int n){
             }
             else{
                 table[i][j] = max(table[i-1][j], table[i][j-1]);
-                //table[i][j] = max(table[i-1][j], table[i][j-1]);
             }
             cout << table[i][j] << " ";
         }
